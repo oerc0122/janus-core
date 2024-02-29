@@ -14,6 +14,16 @@ janus\_core.geom\_opt module
    :undoc-members:
    :show-inheritance:
 
+janus\_core.janus\_types module
+-------------------------------
+
+.. automodule:: janus_core.janus_types
+   :members:
+   :special-members:
+   :private-members:
+   :undoc-members:
+   :show-inheritance:
+
 janus\_core.mlip\_calculators module
 ------------------------------------
 
