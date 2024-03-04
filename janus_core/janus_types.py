@@ -1,9 +1,10 @@
 """
-Module containing types used in Janus-Core
+Module containing types used in Janus-Core.
 """
 
+from collections.abc import Sequence
 from pathlib import Path, PurePath
-from typing import IO, Literal, Optional, Sequence, TypedDict, TypeVar, Union
+from typing import IO, Literal, Optional, TypedDict, TypeVar, Union
 
 from ase import Atoms
 import numpy as np
@@ -21,7 +22,7 @@ PathLike = Union[str, Path]
 
 
 class ASEReadArgs(TypedDict, total=False):
-    """Main arguments for ase.io.read"""
+    """Main arguments for ase.io.read."""
 
     filename: Union[str, PurePath, IO]
     index: Union[int, slice, str]
@@ -31,7 +32,7 @@ class ASEReadArgs(TypedDict, total=False):
 
 
 class ASEWriteArgs(TypedDict, total=False):
-    """Main arguments for ase.io.write"""
+    """Main arguments for ase.io.write."""
 
     filename: Union[str, PurePath, IO]
     images: MaybeSequence[Atoms]
@@ -41,7 +42,7 @@ class ASEWriteArgs(TypedDict, total=False):
 
 
 class ASEOptArgs(TypedDict, total=False):
-    """Main arugments for ase optimisers"""
+    """Main arugments for ase optimisers."""
 
     restart: Optional[bool]
     logfile: Optional[PathLike]
@@ -49,7 +50,7 @@ class ASEOptArgs(TypedDict, total=False):
 
 
 class ASEOptRunArgs(TypedDict, total=False):
-    """Main arugments for running ase optimisers"""
+    """Main arugments for running ase optimisers."""
 
     fmax: float
     steps: int
@@ -61,7 +62,7 @@ Devices = Literal["cpu", "cuda", "mps"]
 
 
 class CalcResults(TypedDict, total=False):
-    """Return type from calculations"""
+    """Return type from calculations."""
 
     energy: MaybeList[float]
     forces: MaybeList[NDArray[np.float64]]
