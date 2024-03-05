@@ -35,7 +35,11 @@ extensions = [
 ]
 
 numpydoc_validation_checks = {"all", "EX01", "SA01", "ES01"}
-numpydoc_validation_exclude = {r"\.__weakref__$", r"\.__repr__$"}
+numpydoc_validation_exclude = {
+    r"\.__weakref__$",
+    r"\.__repr__$",
+    "janus_core\.janus_types\.",
+}
 
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),

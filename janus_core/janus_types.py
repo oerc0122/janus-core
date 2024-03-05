@@ -6,6 +6,7 @@ from collections.abc import Sequence
 from pathlib import Path, PurePath
 from typing import IO, Literal, Optional, TypedDict, TypeVar, Union
 
+
 from ase import Atoms
 import numpy as np
 from numpy.typing import NDArray
